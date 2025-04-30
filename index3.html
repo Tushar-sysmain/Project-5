@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <audio id="bg-music" src="your-audio.mp3" autoplay></audio>
+  <h5 class="typewriter">
+    While searching for<br>
+    Diamond I found you 
+
+    </pre>
+  </h5>
+<h3 style="text-align: center;">❤️</h3>
+<!-- <h3>🧡</h3>
+<h3>💛</h3>
+<h3>💚</h3> -->
+</div>
+<div style="border-radius: 50%;">
+  <br>
+
+<img src="photo1.jpg" class="img1">
+</div>
+<h1>At last thank you so much mam</h1>
+
+    
+<style>
+h1{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:darkturquoise;
+}
+
+.img1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: 2px solid #333; */
+    align-self: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    
+  }
+  .typewriter {
+    /* font-family: monospace; */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid yellow;
+    width: 0;
+    animation: typing 4s steps(50, end) forwards, blink 0.7s step-end infinite;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color:darkturquoise;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 40ch } /* Adjust to match character count */
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('photo2.jpg');   /* Replace with your image path */
+      background-size: cover;                    /* Fill the screen */
+      background-position: center;               /* Center the image */
+      background-repeat: no-repeat;              /* Prevent tiling */
+      background-attachment: fixed;              /* Optional: stays on scroll */
+      font-family: sans-serif;
+    }
+.Insta{
+  border-style: dashed;
+  border-left: 40px;
+  border-color: rgba(17, 177, 17, 0.596);
+  border-radius: 3px;
+  padding-left: 80px;
+}
+.brand{
+  border-style: dashed;
+   /* border-left: 40px; */
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-left: 40px;
+  border-right: 40px;
+  
+  border-color: cornflowerblue;
+  border-radius: 3px;
+  /* padding-left: 80px; */
+  align-self: center;
+}
+
+</style>
+
+<a href="https://www.instagram.com/7087tushar" style="color: rgb(255, 251, 8);" ><footer class="Insta">Instagram Handle</footer></a>
+
+<br> 
+<!-- <a href="index3.html"><button style=" text-align: center;border-style: dotted;border-radius: 10px;font-family:Awesome;">Next Page</button> -->
+  <a href="index2.html"><button style=" text-align: center;border-style: dotted;border-radius: 10px;font-family:Awesome;">Previous Page</button> 
+
+<script>
+  const music = document.getElementById("bg-music");
+
+// Try to unmute after 3 seconds
+setTimeout(() => {
+  music.muted = false;
+  music.play().then(() => {
+    console.log("Music unmuted successfully.");
+  }).catch((error) => {
+    console.warn("Autoplay with sound was blocked. User interaction needed.");
+    showPlayButton();
+  });
+}, 3000);
+
+function showPlayButton() {
+  const btn = document.createElement("button");
+  btn.textContent = "Play Music";
+  btn.style = "position:fixed; top:20px; left:20px; z-index:999; padding:10px;";
+  btn.onclick = () => {
+    music.muted = false;
+    music.play();
+    btn.remove();
+  };
+  document.body.appendChild(btn);
+}
+</script>
+<footer style="text-align:center; color:darkorange;font-size: large;
+font-weight: bold;" class="brand">@Developer Tushar</footer>
+</body>
+</html>
