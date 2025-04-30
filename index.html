@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="bg-music" src="your-audio.mp3" autoplay></audio>
+    <a href="index2.html" id="a">
+        <img src="diamond.png" id="img">
+    </a>
+    <h2>Touch the Diamond</h2>
+    <style>
+        #img{
+            height: auto;
+            width: 140px;
+            padding-top: 170px;
+            padding-bottom: 10px;
+            padding-left: 80px;
+            padding-right: 70px;
+        }
+        /* #a{
+    
+            
+        } */
+        h2{
+            border-style: dotted;
+            text-align: center;
+            
+            
+            color: beige;
+            border-color: aquamarine;
+            border-radius: 20px;
+        }
+        body{
+            background-color: black;
+        }
+        .brand{
+  border-style: dashed;
+   /* border-left: 40px; */
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-left: 40px;
+  border-right: 40px;
+  
+  border-color: cornflowerblue;
+  border-radius: 90px;
+  /* padding-left: 80px; */
+  align-self: center;
+}
+    </style>
+    <script>
+        // Try to unmute after 3 seconds
+setTimeout(() => {
+  music.muted = false;
+  music.play().then(() => {
+    console.log("Music unmuted successfully.");
+  }).catch((error) => {
+    console.warn("Autoplay with sound was blocked. User interaction needed.");
+    showPlayButton();
+  });
+}, 3000);
+
+function showPlayButton() {
+  const btn = document.createElement("button");
+  btn.textContent = "Play Music";
+  btn.style = "position:fixed; top:20px; left:20px; z-index:999; padding:10px;";
+  btn.onclick = () => {
+    music.muted = false;
+    music.play();
+    btn.remove();
+  };
+  document.body.appendChild(btn);
+}
+    </script>
+    <footer style="text-align:center; color:darkorange;font-size: large;
+font-weight: bold;" class="brand">@Developer Tushar</footer>
+</body>
+</html>
