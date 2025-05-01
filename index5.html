@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="bg-music" src="Music.mp3" autoplay></audio>
+   <style>
+    body{
+        background-image: url('Thank you page.jpg');
+
+         background-size: cover;                  /*  Fill the screen */
+         background-position: center;               /*Center the image */
+         background-repeat: no-repeat;            /*  Prevent tiling */
+    }
+    a{
+        text-align: center;
+
+    }
+    button{
+        /* text-align: center; */
+        padding-left: 80px;
+        padding-bottom: 80px;
+        padding-top: 80px;
+        padding-right: 80px;
+    }
+   </style>
+
+<script>
+    const music = document.getElementById("bg-music");
+  
+  // Try to unmute after 3 seconds
+  setTimeout(() => {
+    music.muted = false;
+    music.play().then(() => {
+      console.log("Music unmuted successfully.");
+    }).catch((error) => {
+      console.warn("Autoplay with sound was blocked. User interaction needed.");
+      showPlayButton();
+    });
+  }, 3000);
+  
+  function showPlayButton() {
+    const btn = document.createElement("button");
+    btn.textContent = "Play Music";
+    btn.style = "position:fixed; top:20px; left:20px; z-index:999; padding:10px;";
+    btn.onclick = () => {
+      music.muted = false;
+      music.play();
+      btn.remove();
+    };
+    document.body.appendChild(btn);
+  }
+
+  </script>
+
+
+<a href="index.html"><button style=" text-align: center;border-style: dotted;border-radius: 10px;font-family:Awesome;">Site 1</button></a>
+    <br><br>
+ <a href="index1.html"><button style=" text-align: right;border-style: dotted;border-radius: 10px;font-family:Awesome;">Site 2</button></a>
+ <br><br>
+ <a href="index2.html"><button style=" text-align: right;border-style: dotted;border-radius: 10px;font-family:Awesome;">Site 3</button></a>
+ <br><br>
+ <a href="index3.html"><button style=" text-align: right;border-style: dotted;border-radius: 10px;font-family:Awesome;">Site 4</button></a>
+ <br><br>
+ <a href="index4.html"><button style=" text-align: right;border-style: dotted;border-radius: 10px;font-family:Awesome;">Site 5</button></a>
+ <br><br>
+ <a href="index5.html"><button style=" text-align: right;border-style: dotted;border-radius: 10px;font-family:Awesome;">Site 6</button></a>
+    <br><br>
+</body>
+</html>
