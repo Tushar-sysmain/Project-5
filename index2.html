@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    body {
+    margin: auto; 
+    height: 90vh;
+/* display: flex; */
+/* justify-content: center; */
+/* align-items: center; */
+     background-color: #f4f4f4;
+     font-family: Arial, sans-serif;
+     background-color: black;
+}
+
+.container {
+text-align: center;
+}
+
+.circular-gif {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+overflow: hidden;
+margin: 0 auto;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.circular-gif img {
+width: 100%;
+height: 100%;
+/* object-fit: cover; */
+align-items: center;
+justify-content: center;
+}
+
+.caption {
+margin-top: 12px;
+font-size: 18px;
+color: #ffffff;
+padding-top: 20px;
+padding-bottom:10px; 
+align-items: center;
+justify-content: center;
+}
+.name{
+  align-items: center;
+  justify-content: center;
+  padding-left: 90px;
+  padding-top: 90px;
+  border-radius: 10px;
+  /* border-style: double; */
+  border-radius: 6px;
+}
+site3{
+  padding-left: 30px;
+}
+
+.btn{
+  border-radius: 6px;
+  /* border-style: double; */
+  border-color:chartreuse;
+  padding-left: 30px;
+  margin-left: 70px;
+
+}
+
+
+</style>
+</head>
+<body>
+<audio id="bg-music" src="music5.mp3" autoplay></audio>
+<h1 class="caption"><pre>
+         Hurray!!!!
+
+  You Rebuilded The Diamond
+</pre> <br>
+</h1>
+<div class="container">
+<div class="circular-gif">
+<img src="panda.gif" alt="Centered Circular GIF">
+</div>
+<!-- <a href="index2.html"><button>Rebuild The Diamond</button></a> -->
+</div>
+<script>
+setTimeout(() => {
+music.muted = false;
+music.play().then(() => {
+console.log("Music unmuted successfully.");
+}).catch((error) => {
+console.warn("Autoplay with sound was blocked. User interaction needed.");
+showPlayButton();
+});
+}, 3000);
+
+function showPlayButton() {
+const btn = document.createElement("button");
+btn.textContent = "Play Music";
+btn.style = "position:fixed; top:20px; left:20px; z-index:999; padding:10px;";
+btn.onclick = () => {
+music.muted = false;
+music.play();
+btn.remove();
+};
+document.body.appendChild(btn);
+}
+</script>
+<br>
+<div>
+  <span>
+    <a href="index3.html" class="site3"><button class="btn">Next Page</button></a>
+    <br><br>
+
+    </span>
+  <a href="index1.html" class="bomb"><button class="btn ">Previous Page</button></a>
+    <br><br>
+
+</div>
+<div>
+
+  <a href="https://www.instagram.com/7087tushar/" >
+      <button class="btn style"> 
+        <marquee>    @Developer Tushar    </marquee>
+    </button>
+  </a>
+
+</div>
+</body>
+</html>
